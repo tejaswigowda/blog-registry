@@ -31,4 +31,8 @@ Run `node validate.mjs` before you open the pull request (CI runs it too).
 **Run your own.** Fork this repository and change `registry` in the app's `app/config.js` to your copy's raw address
 (`https://raw.githubusercontent.com/you/blog-registry/main/`), or serve the two files from anywhere.
 
+## Provenance
+
+Each theme entry carries `origin`: `authored`, `imported` (from a theme directory) or `generated`. A generated entry also carries `relation` (`inspired-by` or `derived-from`), `reference` (an https address), `agent` and `generated` (a date), as the theme's own `theme.json` does. The list is a record of what exists and where it came from; a theme with no entry still works by its address.
+
 The files are data under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/); `registry.js` is MIT (it is blog-webCLI's `lib/registry.js`, copied by `node cli/registry.js scaffold`).
